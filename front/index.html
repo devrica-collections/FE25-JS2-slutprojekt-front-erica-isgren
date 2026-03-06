@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./src/main.ts"></script>
+    <title>Scrum Board</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="forms-container">
+        <div class="form-section" id="member-form-container">
+          <h2>Add New Member</h2>
+          <form id="member-form">
+            <input id="member-name" type="text" placeholder="Member Name" required />
+            <select id="member-category" required>
+              <option value="">Select Category</option>
+              <option value="ux">UX</option>
+              <option value="front">Frontend</option>
+              <option value="back">Backend</option>
+            </select>
+            <button type="submit">Add Member</button>
+          </form>
+          <div id="member-form-error" class="error-message"></div>
+        </div>
+
+        <div class="form-section" id="assignment-form-container">
+          <h2>Add New Assignment</h2>
+          <form id="assignment-form">
+            <input id="assignment-title" type="text" placeholder="Assignment Title" required />
+            <textarea id="assignment-description" placeholder="Description" rows="3"></textarea>
+            <select id="assignment-category" required>
+              <option value="">Select Category</option>
+              <option value="ux">UX</option>
+              <option value="front">Frontend</option>
+              <option value="back">Backend</option>
+            </select>
+            <button type="submit">Add Assignment</button>
+          </form>
+          <div id="assignment-form-error" class="error-message"></div>
+        </div>
+      </div>
+
+      <div class="board-container">
+        <h2>Scrum Board</h2>
+        <div class="scrum-board" id="scrum-board">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
